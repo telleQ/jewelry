@@ -3,25 +3,25 @@ html
 
 body
 	height: 100%
+	&.lock
+		overflow: hidden
 
-&.lock
-	overflow: hidden
-
-.header
-	position: fixed
-	width: 100%
-	top: 0
-	left: 0
-	z-index: 50
-	&:before
-		content: ''
-		position: absolute
+	.header
+		position: fixed
 		width: 100%
-		height: 100%
 		top: 0
 		left: 0
-		background-color: #fff
-		z-index: 2
+		z-index: 50
+		opacity: 0.7
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: #fff
+			z-index: 2
 
 .header__body
 	position: relative
@@ -52,9 +52,9 @@ body
 		width: 100%
 		height: 2px
 		left: 0
-		transition: all .3s ease 0s
+		transition: all .3s ease 0s 
 	&:before
-		top: 0
+		top: 0 
 	&:after
 		bottom: 0
 
@@ -67,28 +67,27 @@ body
 	height: 100%
 	background-color: #fff
 	padding: 90px 10px 0px 20px
-	transition: all .4s ease 0s
-	&.active		
+	transition: all .4s ease 0s 
+	&.active
 		top: 0
 
-.header__burger.active
-	&:before		
-		transform: rotate(45deg)
-		top: 9px
-	&:after		
-		transform: rotate(-45deg)
-		bottom: 9px
-	span		
-		transform: scale(0)
+.header__burger.active:before
+	transform: rotate(45deg)
+	top: 9px
+.header__burger.active:after
+	transform: rotate(-45deg)
+	bottom: 9px
+
+.header__burger.active span
+	transform: scale(0)
 
 .header__list
 	display: block
 	position: relative
 	z-index: 2
-
-li
-	list-style: none
-	margin-bottom: 20px
+	li
+		list-style: none
+		margin-bottom: 20px
 
 .header__link
 	color: #81848e
@@ -103,17 +102,85 @@ li
 		padding-top: 60px
 
 .header__logo
+	display: flex
 	flex: 0 0 50px
 	overflow: hidden
 	position: relative
 	z-index: 3
 
-img
+.sticky__logo
+	justify-content: center
+	align-items: center
+
+img.sticky__logo
 	max-width: 100%
 	display: block
 
 /** Search form in HEADER **/
-i.fa-search
+.header__iconsearch:before
+	content: '\f002'
 	font-family: FontAwesome
 	color: #81848e
+	font-size: 24px
+
+
+/* Slider */
+.slider
+	display: flex
+	height: 100vh
+	background: url('../imgs/content/10.JPG') center center/cover no-repeat
+
+img.slider__imgs
+	height: 100vh
+	max-width: 100%
+
+ul.slider__bullet 
+	font-size: 20px
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	flex-flow: column wrap
+	li
+		margin-right: 15px
+		color: #81848e
+
+.slider__bg
+	display: flex
+	align-items: flex-end
+
+.highlight
+	color: #63CEF0
+
+.slider__footer
+	flex-wrap: wrap
+	flex: auto 
+
+button.shopnow
+	border: none
+	width: 125px
+	height: 40px
+	background:#63CEF0
+	opacity: 0.7
+
+.shopnow h4
+	font-family: Cinzel
+	font-size: 18px
+	text-align: center
+	margin: 5px 0 5px 0
+	color: white
+
+.slider__next, .slider__prev, .shopnow
+	margin-bottom: 20px
+
+.slider__next:before
+	content: '\f35a'
+	font-family: FontAwesome
+	color: #81848e
+	font-size: 30px
+
+.slider__prev:before
+	content: '\f359'
+	font-family: FontAwesome
+	color: #81848e
+	font-size: 30px
 
