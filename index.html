@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Document</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -22,16 +22,17 @@
 				<div class="header__logo">
 					<!-- <img class="logo" src="imgs/logo/logo.png" alt="Logotype Beading.jewelry. Hand-made jewelry."> -->
 					<img class="sticky__logo" src="imgs/logo/sticky-logo.png"
-						alt="Logotype Beading.jewelry. Hand-made jewelry.">
+						alt="Logotype Beading.jewelry. Hand-made jewelry." />
 				</div>
+				<div class="header__search"></div>
 				<!-- Логотип для липкого меню
 			<div class="header__stickylogo">
 				<img src="imgs/logo/sticky-logo.png" alt="Logotype Beading.jewelry. Hand-made jewelry.">
 			</div> -->
 				<div class="header__search">
-					<form>
-						<input type="search" name="search" id="search" placeholder="Search here...">
-						<button type="submit"></button>
+					<form class="header__searchform">
+						<input type="search" name="search" id="search" placeholder="Search here..." />
+						<i class="fas fa-search"></i>
 					</form>
 				</div>
 			</div>
@@ -49,12 +50,30 @@
 			</nav>
 		</div>
 	</header>
-
+	<main class="main">
+		<section class="container">
+			<div class="main__slider"><img src="" alt="" /></div>
+		</section>
+		<section class="container">
+			<div class="main__about"></div>
+		</section>
+		<section class="container">
+			<div class="main__banner"></div>
+		</section>
+		<section class="container">
+			<div class="main__types"></div>
+		</section>
+		<section class="container">
+			<div class="main__banner"></div>
+		</section>
+	</main>
 	<footer class="footer">
-		<div class="container"></div>
+		<section class="container">
+			<div class="footer__contacts"></div>
+		</section>
 	</footer>
 
-	<script src="js/lib/jQuery/jquery-3.5.1.js"></script>
+	<script src="js/libs/jQuery/jquery-3.5.1.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

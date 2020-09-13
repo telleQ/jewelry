@@ -1,190 +1,190 @@
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 body.lock {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
 }
 
 .header:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 2;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 2;
 }
 
 .header__body {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
-  align-items: center;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	align-items: center;
 }
 
 .header__burger {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 20px;
-  position: relative;
-  z-index: 3;
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	z-index: 3;
 }
 
 .header__burger span {
-  background-color: #81848e;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  top: 9px;
-  transition: all .3s ease 0s;
+	background-color: #81848e;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 9px;
+	transition: all .3s ease 0s;
 }
 
 .header__burger:before,
 .header__burger:after {
-  content: '';
-  background-color: #81848e;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  transition: all .3s ease 0s;
+	content: '';
+	background-color: #81848e;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	transition: all .3s ease 0s;
 }
 
 .header__burger:before {
-  top: 0;
+	top: 0;
 }
 
 .header__burger:after {
-  bottom: 0;
+	bottom: 0;
 }
 
 .header__menu {
-  overflow: auto;
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 90px 10px 0px 20px;
-  transition: all .4s ease 0s;
+	overflow: auto;
+	position: fixed;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	padding: 90px 10px 0px 20px;
+	transition: all .4s ease 0s;
 }
 
 .header__menu.active {
-  top: 0;
+	top: 0;
 }
 
 .header__burger.active:before {
-  transform: rotate(45deg);
-  top: 9px;
+	transform: rotate(45deg);
+	top: 9px;
 }
 
 .header__burger.active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
+	transform: rotate(-45deg);
+	bottom: 9px;
 }
 
 .header__burger.active span {
-  transform: scale(0);
+	transform: scale(0);
 }
 
 .header__list {
-  display: block;
-  position: relative;
-  z-index: 2;
+	display: block;
+	position: relative;
+	z-index: 2;
 }
 
 .header__list li {
-  list-style: none;
-  margin-bottom: 20px;
+	list-style: none;
+	margin-bottom: 20px;
 }
 
 .header__link {
-  color: #81848e;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 24px;
+	color: #81848e;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 24px;
 }
 
 @media (min-width: 767px) {
-  .header__burger {
-    display: none;
-  }
+	.header__burger {
+		display: none;
+	}
 
-  .content {
-    padding-top: 60px;
-  }
+	.content {
+		padding-top: 60px;
+	}
 }
 
 .header__logo {
-  flex: 0 0 50px;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
+	flex: 0 0 50px;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
 }
 
 .header__logo img {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 .header__search {
-  position: relative;
-  z-index: 3;
+	position: relative;
+	z-index: 3;
 }
 
 .header__search form {
-  height: 42px;
+	height: 42px;
 }
 
 .header__search input {
-  height: 100%;
-  width: 0;
-  border: none;
-  border-bottom: 2px solid transparent;
-  outline: none;
-  background: transparent;
-  transition: .4s cubic-bezier(0, 0.8, 0, 1);
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
+	height: 100%;
+	width: 0;
+	border: none;
+	border-bottom: 2px solid transparent;
+	outline: none;
+	background: transparent;
+	transition: .4s cubic-bezier(0, 0.8, 0, 1);
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
 }
 
 .header__search input:focus {
-  width: 300px;
-  z-index: 1;
-  border-bottom: 2px solid #fff
+	width: 300px;
+	z-index: 1;
+	border-bottom: 2px solid #fff
 }
 
 .header__search button {
-  background: #81848e;
-  border: none;
-  height: 42px;
-  width: 42px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
+	background: #81848e;
+	border: none;
+	height: 42px;
+	width: 42px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
 }
 
 .header__search button:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #fff
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 16px;
+	color: #fff
 }

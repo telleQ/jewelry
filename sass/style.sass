@@ -1,0 +1,119 @@
+html
+	height: 100%
+
+body
+	height: 100%
+
+&.lock
+	overflow: hidden
+
+.header
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 50
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: #fff
+		z-index: 2
+
+.header__body
+	position: relative
+	display: flex
+	justify-content: space-between
+	height: 60px
+	align-items: center
+
+.header__burger
+	display: block
+	position: relative
+	width: 30px
+	height: 20px
+	position: relative
+	z-index: 3
+	span
+		background-color: #81848e
+		position: absolute
+		width: 100%
+		height: 2px
+		left: 0
+		top: 9px
+		transition: all .3s ease 0s
+	&:before, &:after
+		content: ''
+		background-color: #81848e
+		position: absolute
+		width: 100%
+		height: 2px
+		left: 0
+		transition: all .3s ease 0s
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+
+.header__menu
+	overflow: auto
+	position: fixed
+	top: -100%
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	padding: 90px 10px 0px 20px
+	transition: all .4s ease 0s
+	&.active		
+		top: 0
+
+.header__burger.active
+	&:before		
+		transform: rotate(45deg)
+		top: 9px
+	&:after		
+		transform: rotate(-45deg)
+		bottom: 9px
+	span		
+		transform: scale(0)
+
+.header__list
+	display: block
+	position: relative
+	z-index: 2
+
+li
+	list-style: none
+	margin-bottom: 20px
+
+.header__link
+	color: #81848e
+	text-transform: uppercase
+	text-decoration: none
+	font-size: 24px
+
+@media (min-width: 767px)
+	.header__burger
+		display: none
+	.content
+		padding-top: 60px
+
+.header__logo
+	flex: 0 0 50px
+	overflow: hidden
+	position: relative
+	z-index: 3
+
+img
+	max-width: 100%
+	display: block
+
+/** Search form in HEADER **/
+i.fa-search
+	font-family: FontAwesome
+	color: #81848e
+
