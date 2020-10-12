@@ -1,0 +1,111 @@
+/** Переменные для цветов **/
+$color-grey: #656565;
+$color-blue: #63CEF0;
+$color-white: #FFFFFF;
+/** Переменные для шрифтов **/
+$cinzel: 'Cinzel Decorative',
+"Arial",
+cursive;
+$mont: 'Montserrat',
+'Calibri',
+sans-serif;
+
+$roboto: 'Roboto',
+'Times New Roman',
+serif;
+
+@mixin title {
+   font: {
+      family: $cinzel;
+      style: normal;
+      weight: 400;
+      size: 2.4rem;
+   }
+
+   color: $color-grey;
+}
+
+@mixin text {
+   font: {
+      family: $roboto;
+      style: normal;
+      weight: 400;
+      size: 1.8rem;
+   }
+
+   line-height: 140%;
+   color: $color-grey;
+}
+
+@mixin article-item {
+   font: {
+      family: $roboto;
+      style: normal;
+      weight: normal;
+      size: 1.5rem;
+   }
+
+   text-align: justify;
+   line-height: 160%;
+   color: $color-grey;
+}
+
+@mixin h3 {
+   font: {
+      family: $cinzel;
+      weight: normal;
+      size: 2rem;
+   }
+
+   text-align: center;
+   color: $color-grey;
+}
+
+@mixin h5 {
+   font: {
+      family: $roboto;
+      style: italic;
+      weight: normal;
+      size: 1rem;
+   }
+
+   text-align: right;
+   color: $color-grey;
+}
+
+@mixin content-offset {
+   max-width: 120rem;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+}
+
+@mixin anim($timing) {
+   transition-property: all;
+   transition-duration: 0.4s;
+   transition-delay: 0s;
+   transition-timing-function: $timing;
+}
+
+@mixin shop {
+   border: none;
+   outline: none;
+   border-radius: 10rem;
+   background-color: #6565658a;
+   padding: 1rem 2.5rem;
+
+   a {
+      @include title;
+      text-decoration: none;
+      color: $color-white;
+      z-index: 50;
+   }
+
+   &:hover {
+      cursor: pointer;
+      background-color: $color-blue;
+   }
+
+   @include anim(easy-in-out);
+}

@@ -1,68 +1,96 @@
-//первая строка нужна, чтобы скрипт начал срабатывать только после загрузки страницы.
 $(document).ready(function () {
-	$('.header__burger').click(function (event) {
-		$('.header__burger,.header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
-	$('.header__menu').click(function () {
-		$('.header__burger, .header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
+    let width = $(document).width();
+    $('.wrapper').css('width', width);
 
-	// Slider
-	let btnnext = document.querySelector(".slider__next");
-	let btnprev = document.querySelector(".slider__prev");
-	let slide = document.querySelector(".slider__imgs");
-	let imgs = ["imgs/content/10.jpg", "imgs/content/7.jpg", "imgs/content/8.jpg"];
-	let count = 0;
-	btnnext.addEventListener("click", () => {
-		if (count >= imgs.length) {
-			count = 0;
-		}
-		if (count < 0) {
-			count = imgs.length - 1;
-		}
-		slide.setAttribute("src", imgs[count]);
-		count++;
-	});
+    // Адаптивное меню
+    $('.icon-menu').click(function (event) {
+        $(this).toggleClass('active');
+        $('.menu__body').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
 
-	btnprev.addEventListener("click", () => {
-		if (count < 0) {
-			count = imgs.length - 1;
-		}
-		if (count >= imgs.length) {
-			count = 0;
-		}
-		slide.setAttribute("src", imgs[count]);
-		count--;
-	});
+    // Адаптивное изображение на первой секции
+    function ibg() {
+        $.each($('.ibg'), function (index, val) {
+            if ($(this).find('img').length > 0) {
+                $(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
+            }
+        });
+    }
 
-	//Создаем индикатор выбранной картинки, при нажатии на 1ый - получаем 1ю картинку, при нажатии 2ой получаем вторую и тд., и индикатор выбранной картинки подсвечивается другим цветом.
-	// Можно указать так, но на учебном ПК не работало slide.setAttribute("src", imgs[this.dataset.lide]); highlight(this); - тогда в html - в теге li нужно добавить указание по индексации, пример <li class="lib" data-lide="0"></li>, при указании "slide.setAttribute("src", imgs[i]); highlight(bullet[i]); не нужно прописывать доп индексирование в теге li"
-	let bullet = document.querySelectorAll(".slider__bullet li");
-	for (let i = 0; i < bullet.length; i++) {
-		bullet[i].addEventListener("click", function () {
-			slide.setAttribute("src", imgs[this.dataset.slide]);
-			highlight(this);
-		});
-	}
+    ibg();
 
-	// setInterval(function () {
-	// 	if (count >= imgs.length) {
-	// 		count = 0;
-	// 	}
-	// 	slide.setAttribute('src', imgs[count]);
-	// 	highlight(bullet[count]);
-	// 	count++;
-	// }, 2000);
+    // Кнопка вверх
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 500) {
+            $('.btnup').addClass("show");
+        } else {
+            $('.btnup').removeClass("show");
+        }
+    });
 
-	let selected;
+    $('.btnup').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
 
-	function highlight(node) {
-		if (selected) {
-			selected.classList.remove("active");
-		}
-		selected = node;
-		selected.classList.add("active");
-	}
+    // подсвечивает активный пункт меню
+    $('.menu__link a').each(function () {
+        let location = window.location.href;
+        let link = this.href;
+        if (location == link) {
+            $(this).addClass('link__active');
+        }
+    });
+
+    $('.sliderbg').slick({
+        dots: true,
+        arrows: false,
+        customPaging: function () {
+            return ''
+        }
+    });
+    $(".modal-btn").on('click', function (e) {
+        e.preventDefault()
+        $(".overlay").addClass("active");
+        $(".modal").addClass("active");
+        // $('body').toggleClass('lock');
+    });
+
+    $(".modal").find(".close").click(function () {
+        $(".modal").removeClass("active");
+        $(".overlay").removeClass("active");
+    });
+
+    $(".overlay").click(function () {
+        $(".modal").removeClass("active");
+        $(".overlay").removeClass("active");
+    });
+
+    // Проверка правильности заполнения поля email - формы заказа
+    $(function () {
+        function validateEmail(email) {
+            var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return reg.test(email);
+        }
+
+        $(document).on('click', '#buy_btn', function () {
+            var name = $('#name__lastname').val();
+            var email = $('#email').val();
+
+
+            if (name == '') {
+                $('span#valid').html('You have to fill out all input boxes').css('color', 'red');
+                return false;
+            } else if (email == '') {
+                $('span#valid').html('You have to fill out all input boxes').css('color', 'red');
+                return false;
+            } else if (!validateEmail(email)) {
+                $('span#valid').html('Email address you entered is not valid').css('color', 'red');
+                return false;
+            }
+        });
+    });
 });
