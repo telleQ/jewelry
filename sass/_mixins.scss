@@ -57,9 +57,48 @@ serif;
       size: 2rem;
    }
 
+   letter-spacing: 0.08rem;
    text-align: center;
    color: $color-grey;
+
+   a {
+      @include anim(easy-in-out);
+      text-decoration: none;
+      color: $color-white;
+      z-index: 50;
+
+      &:hover {
+         cursor: pointer;
+         color: $color-blue;
+      }
+   }
 }
+
+@mixin h2 {
+   font: {
+      family: $cinzel;
+      weight: normal;
+      size: 2.2rem;
+   }
+
+   letter-spacing: 0.1rem;
+   text-align: center;
+   color: $color-grey;
+
+   a {
+      @include anim(easy-in-out);
+      text-decoration: none;
+      z-index: 50;
+
+      color: $color-grey;
+
+      &:hover {
+         cursor: pointer;
+         color: $color-blue;
+      }
+   }
+}
+
 
 @mixin h5 {
    font: {
@@ -88,7 +127,7 @@ serif;
    transition-timing-function: $timing;
 }
 
-@mixin shop {
+@mixin btn-more {
    border: none;
    outline: none;
    border-radius: 10rem;
@@ -108,4 +147,32 @@ serif;
    }
 
    @include anim(easy-in-out);
+}
+
+// hover on link
+@mixin text-underline {
+   a {
+      color: $color-grey;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.6s;
+
+      &:before {
+         content: "";
+         width: 0;
+         height: 0.2rem;
+         position: absolute;
+         bottom: -20%;
+         left: 50%;
+         transition: all 0.3s;
+      }
+
+      &:hover {
+         &:before {
+            width: 100%;
+            left: 0;
+            background: $color-blue;
+         }
+      }
+   }
 }

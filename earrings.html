@@ -4,17 +4,23 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-   <meta name="description" content="Creating necklaces, bracelets, earrings, etc. with all the kinds of top quality beads.
-         Always full with new ideas and no day goes by without beading." />
-   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <meta name="description" content="Creating earrings with all the kinds of top quality beads. />
+   <meta http-equiv=" X-UA-Compatible" content="ie=edge" />
    <title>Earrings by Beading Jewelry</title>
 
    <link rel="stylesheet" href="css/null.css">
    <link rel="stylesheet" href="css/normalize.css" />
    <link rel="stylesheet" href="css/fonts.css" />
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="theme-color" content="#ffffff">
+   <!-- end favicon -->
    <link rel="stylesheet" href="css/style.min.css" />
 </head>
-<!-- !добавить кнопку(иконку) с переходом на etsy покупки данного конкретного товара (например после цены указать) -->
 
 <body>
    <div class="wrapper">
@@ -30,54 +36,77 @@
                   </div>
                   <div class="menu__body">
                      <ul class="menu__list">
-                        <li class="menu__link"><a href="/blog.html">Blog</a></li>
-                        <li class="menu__link"><a href="/accessories.html">accessories</a>
+                        <li class="menu__link"><a href="./about.html"> about</a></li>
+                        <li class="menu__link"><a href="./blog.html"> my blog</a></li>
+                        <li class="menu__link"><a href="./collections.html">collections</a></li>
+
+                        <li class="menu__link menu__sub"><a href="#">category <span>&rsaquo;</span></a>
+                           <ul class="menu__sub-list">
+                              <li class="menu__sub-link"><a href="./accessories.html">accessories</a></li>
+                              <li class="menu__sub-link"><a href="./necklaces.html">necklaces</a></li>
+                              <li class="menu__sub-link"><a href="./bracelets.html">bracelets</a></li>
+                              <li class="menu__sub-link"><a href="./earrings.html">earrings</a></li>
+                           </ul>
                         </li>
-                        <li class="menu__link"><a href="/bracelets.html">bracelets</a>
-                        </li>
-                        <li class="menu__link"><a href="/necklaces.html">necklaces</a>
-                        </li>
-                        <li class="menu__link"><a href="/earrings.html">earrings</a></li>
-                        <li class="menu__link"><a href="/payment.html">payment</a></li>
-                        <li class="menu__link"><a href="/delivery.html">delivery</a></li>
+
+                        <li class="menu__link"><a href="./delivery.html">delivery</a></li>
                      </ul>
                   </div>
                </nav>
                <div class="header__logo">
                   <a href="./index.html" class="header__logo-link" title="come back home"><img
-                        src="/assets/logo/sticky-logo.png" alt="logotype"></a>
-               </div>
-               <div class="header__search">
-                  <form class="search-form">
-                     <input class="search-input" type="search" name="search" placeholder="Search here...">
-                     <button class="search-btn icon-search" type="submit">
-                        <span></span>
-                        <span></span>
-                     </button>
-                  </form>
+                        src="./assets/logo/mini-logo.png" alt="logotype"></a>
                </div>
             </div>
          </header>
 
          <section class="screen">
             <div class="screen__bg ibg">
-               <div class="screen__title">
+               <h1 class="screen__title">
                   Earrings
-               </div>
-               <img loading="lazy" src="/assets/content/5.jpg" alt="Bracelets">
+               </h1>
+               <img loading="lazy" src="./assets/content/5.jpg" alt="Bracelets">
             </div>
          </section>
 
          <section class="container">
             <div class="cards">
                <div class="card">
-                  <a href="/pages/cards/black-earrings.html">
+                  <a href="./pages/cards/earrings/black-earrings.html">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/earrings/black_earrings/1.jpg" alt="black&silver earrings"
+                           class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle</div>
+                        <h2 class="card__item-title">dark silver beaded</h2>
+                        <h3 class="card__item-subtitle">made of quality Czech beads</h3>
+                        <div class="card__item-price">20$</div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="card">
+                  <a href="./pages/cards/earrings/ombre-earrings.html">
+                     <div class="card__image-wrapper">
+                        <img src="./assets/cards/earrings/ombre_earrings/10.jpg" alt="Ombre earrings by Beading Jewelry"
+                           class="card__image">
+                     </div>
+                     <div class="card__item">
+                        <h2 class="card__item-title">Ombre earrings</h2>
+                        <h3 class="card__item-subtitle">as for a special occasion, so as everyday</h3>
+                        <div class="card__item-price">49$</div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="card">
+                  <a href="#">
+                     <div class="card__image-wrapper">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
+                     </div>
+                     <div class="card__item">
+                        <h2 class="card__item-title">Title</h2>
+                        <h3 class="card__item-subtitle">Subtitle</h3>
                         <div class="card__item-price">20$</div>
                      </div>
                   </a>
@@ -85,35 +114,11 @@
 
                <div class="card"><a href="#">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle</div>
-                        <div class="card__item-price">20$</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="card"><a href="#">
-                     <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
-                     </div>
-                     <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle</div>
-                        <div class="card__item-price">20$</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="card"><a href="#">
-                     <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
-                     </div>
-                     <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle</div>
+                        <h2 class="card__item-title">Title</h2>
+                        <h3 class="card__item-subtitle">Subtitle</h3>
                         <div class="card__item-price">10$</div>
                      </div>
                   </a>
@@ -121,11 +126,11 @@
 
                <div class="card"><a href="#">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle</div>
+                        <h2 class="card__item-title">Title</h2>
+                        <h3 class="card__item-subtitle">Subtitle</h3>
                         <div class="card__item-price">20$</div>
                      </div>
                   </a>
@@ -134,12 +139,12 @@
                <div class="card">
                   <a href="#">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">Title</div>
-                        <div class="card__item-subtitle">Subtitle
-                        </div>
+                        <h2 class="card__item-title">Title</h2>
+                        <h3 class="card__item-subtitle">Subtitle
+                        </h3>
                         <div class="card__item-price">5$</div>
                      </div>
                   </a>
@@ -147,13 +152,13 @@
 
                <div class="card"><a href="#">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">
-                           Title</div>
-                        <div class="card__item-subtitle">
-                           Subtitle</div>
+                        <h2 class="card__item-title">
+                           Title</h2>
+                        <h3 class="card__item-subtitle">
+                           Subtitle</h3>
                         <div class="card__item-price">
                            20$</div>
                      </div>
@@ -163,13 +168,13 @@
                <div class="card">
                   <a href="#">
                      <div class="card__image-wrapper">
-                        <img loading="lazy" src="/assets/cards/test2.jpg" alt="" class="card__image">
+                        <img src="./assets/cards/test2.jpg" alt="" class="card__image">
                      </div>
                      <div class="card__item">
-                        <div class="card__item-title">
-                           Title</div>
-                        <div class="card__item-subtitle">
-                           Subtitle</div>
+                        <h2 class="card__item-title">
+                           Title</h2>
+                        <h3 class="card__item-subtitle">
+                           Subtitle</h3>
                         <div class="card__item-price">
                            20$</div>
                      </div>
@@ -177,7 +182,7 @@
                </div>
             </div>
          </section>
-
+         <hr>
          <footer class="footer container">
             <div class="footer__row">
                <div class="footer__body">
@@ -187,22 +192,19 @@
                   <div class="footer__links">
                      <span><a class="footer__link" href="mailto:" target="_blank">Email:
                            liza.moon@gmail.com</a></span>
-                     <span><a class="footer__link" href="https://wa.me/380973981429" target="_blank">WhatsApp:
-                           liza.moon</a></span>
-                     <span><a class="footer__link" href="http://t.me/" target="_blank">Telegram:
-                           liza.moon</a></span>
-                  </div>
-                  <div class="footer__worktime">
-                     Mon to Fri 8 AM - 4 PM (+3.00)
                   </div>
                </div>
                <div class="footer__socicons">
-                  <a href="#" title="Facebook" target="_blank"><img loading="lazy" src="/assets/icons/facebook.svg">
+                  <a href="https://www.etsy.com/shop/MagicBeadCrochet" title="Etsy" target="_blank"><img loading="lazy"
+                        src="./assets/icons/etsy.svg" alt="Link on beading jewelry etsy"> </a>
+                  <a href="https://www.facebook.com/magicbeadcrochet" title="Facebook" target="_blank"><img
+                        loading="lazy" src="./assets/icons/facebook.svg" alt="Link on beading jewelry facebook">
                   </a>
-                  <a href="#" title="Instagram" target="_blank"><img loading="lazy" src="/assets/icons/inst.svg"> </a>
-                  <a href="#" title="Pinterest" target="_blank"><img loading="lazy" src="/assets/icons/pinterest.svg">
+                  <a href="https://www.instagram.com/magicbeadcrochet" title="Instagram" target="_blank"><img
+                        loading="lazy" src="./assets/icons/inst.svg" alt="Link on beading jewelry instagram"> </a>
+                  <a href="https://www.pinterest.com/MagicBeadCrochet" title="Pinterest" target="_blank"><img
+                        loading="lazy" src="./assets/icons/pinterest.svg" alt="Link on beading jewelry pinterest">
                   </a>
-                  <a href="#" title="Etsy" target="_blank"><img loading="lazy" src="/assets/icons/etsy.svg"> </a>
                </div>
                <div class="footer__footer">
                   <div class="footer__copyright">
@@ -213,13 +215,14 @@
                      <a class="btnup"></a>
                   </div>
                </div>
+
             </div>
          </footer>
       </main>
    </div>
 
    <script src="js/libs/jQuery/jquery-3.5.1.js"></script>
-   <!-- <script src="js/slider.js"></script> -->
+   <script src="../../js/libs/slick/slick.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 
